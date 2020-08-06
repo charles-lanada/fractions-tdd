@@ -4,36 +4,37 @@ namespace FractionsTest
 {
     internal class Fraction
     {
-        private int integerValue;
+        private readonly int numerator;
         private readonly int denominator;
 
-        public Fraction(int integerValue)
+        public Fraction(int numerator)
         {
-            this.integerValue = integerValue;
+            this.numerator = numerator;
+            denominator = 1;
         }
 
         public Fraction(int numerator, int denominator)
         {
-            this.integerValue = numerator;
+            this.numerator = numerator;
             this.denominator = denominator;
         }
 
         public Fraction Plus(Fraction that)
         {
-            return new Fraction(this.integerValue + that.integerValue, denominator);
+            return new Fraction(numerator + that.numerator , denominator);
         }
 
         public int IntValue()
         {   
-            return integerValue;
+            return numerator;
         }
 
-        public int Numerator()
+        public int GetNumerator()
         {
-            return 3;
+            return numerator;
         }
 
-        public int Denominator()
+        public int GetDenominator()
         {
             return denominator;
         }

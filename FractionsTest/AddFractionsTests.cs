@@ -45,8 +45,8 @@ namespace FractionsTest
         public void non_trivial_denominators()
         {
             Fraction sum = new Fraction(1, 5).Plus(new Fraction(2, 5));
-            Assert.That(sum.Numerator(), Is.EqualTo(3));
-            Assert.That(sum.Denominator(), Is.EqualTo(5));
+            Assert.That(sum.GetNumerator(), Is.EqualTo(3));
+            Assert.That(sum.GetDenominator(), Is.EqualTo(5));
         }
 
         // 2/7 + 4/7 = 6/7
