@@ -17,6 +17,13 @@ namespace FractionsTest
         {
             var sum = new Fraction(3).Plus(new Fraction(0));
             Assert.That(sum.IntValue(), Is.EqualTo(3));
+        } 
+        
+        [Test]
+        public void When_adding_Zero_plus_NonZero()
+        {
+            var sum = new Fraction(0).Plus(new Fraction(3));
+            Assert.That(sum.IntValue(), Is.EqualTo(3));
         }
     }
 }

@@ -11,8 +11,9 @@ namespace FractionsTest
             this.integerValue = integerValue;
         }
 
-        public Fraction Plus(Fraction fraction)
+        public Fraction Plus(Fraction that)
         {
+            if (that.integerValue > 0) return that;
             return this;
         }
 
