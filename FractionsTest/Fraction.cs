@@ -13,7 +13,10 @@ namespace FractionsTest
 
         public Fraction Plus(Fraction that)
         {
-            if (that.integerValue > 0) return that;
+            if (that.integerValue > 0)
+            {
+                return new Fraction(this.integerValue + that.integerValue);
+            }
             return this;
         }
 
