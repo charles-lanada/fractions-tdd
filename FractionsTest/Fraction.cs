@@ -13,12 +13,12 @@ namespace FractionsTest
 
         public Fraction Plus(Fraction fraction)
         {
-            return fraction;
+            return this;
         }
 
         public int IntValue()
         {
-            return 0;
+            return integerValue;
         }
     }
 }
