@@ -1,0 +1,9 @@
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\bin\Debug\netstandard2.0\Fractions.deps.json
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\bin\Debug\netstandard2.0\Fractions.dll
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\bin\Debug\netstandard2.0\Fractions.pdb
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.csprojAssemblyReference.cache
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.AssemblyInfoInputs.cache
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.AssemblyInfo.cs
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.dll
+C:\Users\Charles\Documents\Tech\tdd-training\FractionsTDD\Fractions\obj\Debug\netstandard2.0\Fractions.pdb
