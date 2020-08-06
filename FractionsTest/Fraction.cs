@@ -7,10 +7,8 @@ namespace FractionsTest
         private readonly int numerator;
         private readonly int denominator;
 
-        public Fraction(int numerator)
+        public Fraction(int integerValue): this(integerValue, 1)
         {
-            this.numerator = numerator;
-            denominator = 1;
         }
 
         public Fraction(int numerator, int denominator)

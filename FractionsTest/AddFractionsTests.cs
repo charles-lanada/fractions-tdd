@@ -42,20 +42,13 @@ namespace FractionsTest
 
         // 1/5 + 2/5 = 3/5
         [Test]
-        public void non_trivial_denominators()
+        public void Non_trivial_denominators()
         {
             Fraction sum = new Fraction(1, 5).Plus(new Fraction(2, 5));
             Assert.That(sum.GetNumerator(), Is.EqualTo(3));
             Assert.That(sum.GetDenominator(), Is.EqualTo(5));
         }
 
-        // 2/7 + 4/7 = 6/7
-        //[Test]
-        //public void non_trivial_denominators_2()
-        //{
-        //    Fraction sum = new Fraction(2, 7).Plus(new Fraction(4, 7));
-        //    Assert.That(sum.Numerator(), Is.EqualTo(6));
-        //    Assert.That(sum.Denominator(), Is.EqualTo(7));
-        //}
+
     }
 }
