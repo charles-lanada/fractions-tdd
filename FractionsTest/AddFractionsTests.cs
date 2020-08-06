@@ -32,5 +32,12 @@ namespace FractionsTest
             var sum = new Fraction(4).Plus(new Fraction(3));
             Assert.That(sum.IntValue(), Is.EqualTo(7));
         }
+        
+        [Test]
+        public void When_adding_Negative_NonNegative()
+        {
+            var sum = new Fraction(-3).Plus(new Fraction(1));
+            Assert.That(sum.IntValue(), Is.EqualTo(-2));
+        }
     }
 }
