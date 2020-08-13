@@ -27,7 +27,7 @@ namespace FractionsTest
 
         // 1/2 + 1/3 = 5/6
         [Test]
-        public void Non_trivial_denominators_but_different_denominators()
+        public void Different_denominators_without_reducing_the_results()
         {
             var sum = new Fraction(1, 2).Plus(new Fraction(1, 3));
             Assert.That(sum, Is.EqualTo(new Fraction(5, 6)));
