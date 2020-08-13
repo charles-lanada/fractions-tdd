@@ -23,6 +23,11 @@ namespace FractionsTest
             return new Fraction(numerator + that.numerator , denominator);
         }
 
+        public override string ToString()
+        {
+            return $" {numerator}/{denominator} ";
+        }
+
         public override bool Equals(object other)
         {   
             // default implementation of equals is based on identity and uses GetHashCode()
