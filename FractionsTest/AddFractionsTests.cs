@@ -1,6 +1,4 @@
 using NUnit.Framework;
-using Fractions;
-using NUnit.Framework.Constraints;
 
 namespace FractionsTest
 {
@@ -32,7 +30,5 @@ namespace FractionsTest
             var sum = new Fraction(1, 2).Plus(new Fraction(1, 3));
             Assert.That(sum, Is.EqualTo(new Fraction(5, 6)));
         }
-
-
     }
 }
