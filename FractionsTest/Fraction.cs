@@ -20,6 +20,10 @@ namespace FractionsTest
 
         public Fraction Plus(Fraction that)
         {
+            if(this.denominator != that.denominator)
+            {
+                return new Fraction(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator);
+            }
             return new Fraction(numerator + that.numerator , denominator);
         }
 
