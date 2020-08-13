@@ -6,39 +6,15 @@ namespace FractionsTest
 {
     public class AddFractionsTests
     {
-        [Test]
-        public void When_adding_zeroes()
+        [TestCase(0, 0, 0)]
+        [TestCase(3, 0, 3)]
+        [TestCase(0, 3, 3)]
+        [TestCase(4, 3, 7)]
+        [TestCase(-3, 1, -2)]
+        public void When_adding_whole_numbers(int num1, int num2, int result)
         {
-            var sum = new Fraction(0).Plus(new Fraction(0));
-            Assert.That(sum, Is.EqualTo(new Fraction(0)));
-        }
-
-        [Test]
-        public void When_adding_NonZero_plus_Zero()
-        {
-            var sum = new Fraction(3).Plus(new Fraction(0));
-            Assert.That(sum, Is.EqualTo(new Fraction(3)));
-        } 
-        
-        [Test]
-        public void When_adding_Zero_plus_NonZero()
-        {
-            var sum = new Fraction(0).Plus(new Fraction(3));
-            Assert.That(sum, Is.EqualTo(new Fraction(3)));
-        }   
-
-        [Test]
-        public void When_adding_NonNegative_NonZero()
-        {
-            var sum = new Fraction(4).Plus(new Fraction(3));
-            Assert.That(sum, Is.EqualTo(new Fraction(7)));
-        }
-        
-        [Test]
-        public void When_adding_Negative_NonNegative()
-        {
-            var sum = new Fraction(-3).Plus(new Fraction(1));
-            Assert.That(sum, Is.EqualTo(new Fraction(-2)));
+            var sum = new Fraction(num1).Plus(new Fraction(num2));
+            Assert.That(sum, Is.EqualTo(new Fraction(result)));
         }
 
         // 1/5 + 2/5 = 3/5
