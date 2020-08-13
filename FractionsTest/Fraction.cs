@@ -36,5 +36,16 @@ namespace FractionsTest
         {
             return denominator;
         }
+
+        public override bool Equals(object other)
+        {
+            if(other is Fraction)
+            {
+                var that = other as Fraction;
+                return this.numerator == that.numerator && this.denominator == that.denominator;
+            }
+
+            return false;
+        }
     }
 }
