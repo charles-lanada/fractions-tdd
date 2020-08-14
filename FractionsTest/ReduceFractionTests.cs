@@ -23,6 +23,12 @@ namespace FractionsTest
             Assert.AreEqual(new Fraction(6), new Fraction(24, 4));
         }
         
+        [Test]
+        public void Reduce_to_zero()
+        {
+            Assert.AreEqual(new Fraction(0), new Fraction(0, 12312));
+        }
+        
     }
 
 }
