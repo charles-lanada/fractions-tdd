@@ -14,8 +14,9 @@ namespace FractionsTest
 
         public Fraction(int numerator, int denominator)
         {
-            this.numerator = numerator;
-            this.denominator = denominator;
+            var greatesCommonDivisor = NumberTheory.GreatestCommonDivisor(numerator, denominator);
+            this.numerator = numerator / greatesCommonDivisor;
+            this.denominator = denominator / greatesCommonDivisor;
         }
 
         public Fraction Plus(Fraction that)
