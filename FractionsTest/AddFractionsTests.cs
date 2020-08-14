@@ -30,5 +30,25 @@ namespace FractionsTest
             var sum = new Fraction(1, 2).Plus(new Fraction(1, 3));
             Assert.That(sum, Is.EqualTo(new Fraction(5, 6)));
         }
+
+        [Test]
+        public void Reduce_result_to_whole_number()
+        {
+            var sum = new Fraction(5, 10).Plus(new Fraction(5, 10));
+            Assert.That(sum, Is.EqualTo(new Fraction(1)));
+        }
+
+        [Test]
+        public void One_denominator_is_a_multiple_of_the_other()
+        {
+            var sum = new Fraction(3, 4).Plus(new Fraction(5, 8));
+            Assert.That(sum, Is.EqualTo(new Fraction(11,8)));
+        }
+
+        // this part unit testing.
+        // common factor in denominators
+        // reduce result even when denominators are the same
+        // negative fractions and reducing
+        // negative signes everywhere (ignored)
     }
 }

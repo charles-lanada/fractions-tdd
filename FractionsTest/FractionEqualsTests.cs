@@ -27,7 +27,19 @@ namespace FractionsTest
             Assert.That(result, Is.EqualTo(false));
         }
 
-        // @TODO: Reduce in equals
+        [Test]
+        public void When_having_negatives()
+        {
+            var result = new Fraction(1, 2).Equals(new Fraction(-1, -2));
+            Assert.True(result);
+
+            var result2 = new Fraction(-1, 2).Equals(new Fraction(1, -2));
+            Assert.True(result2);
+
+            var result3 = new Fraction(-1, 2).Equals(new Fraction(-1, 2));
+            Assert.True(result3);
+        }
+        
     }
 
 

@@ -14,18 +14,15 @@ namespace FractionsTest
 
         public Fraction(int numerator, int denominator)
         {
-            var greatesCommonDivisor = NumberTheory.GreatestCommonDivisor(numerator, denominator);
+            var denominatorSign = denominator < 0 ? -1 : 1;
+            var greatesCommonDivisor = NumberTheory.GreatestCommonDivisor(numerator, denominator) * denominatorSign;
             this.numerator = numerator / greatesCommonDivisor;
             this.denominator = denominator / greatesCommonDivisor;
         }
 
         public Fraction Plus(Fraction that)
         {
-            if (this.denominator != that.denominator)
-            {
-                return new Fraction(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator);
-            }
-            return new Fraction(numerator + that.numerator, denominator);
+            return new Fraction(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator);
         }
 
         public override string ToString()
