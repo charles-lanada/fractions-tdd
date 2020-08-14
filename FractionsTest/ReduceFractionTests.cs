@@ -16,6 +16,12 @@ namespace FractionsTest
         {
             Assert.AreEqual(new Fraction(6, 8), new Fraction(3, 4));
         }  
+
+        [Test]
+        public void Reduce_to_whole_number()
+        {
+            Assert.AreEqual(new Fraction(6), new Fraction(24, 4));
+        }
         
     }
 
