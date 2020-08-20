@@ -93,6 +93,20 @@ namespace FractionsTest
             Assert.That(result, Is.EqualTo(new Fraction(expected)));
         }
 
+        [TestCase(2,5,2,5,0,5)]
+        [TestCase(3,4,1,4,1,2)]
+        public void When_subtracting_fractions(
+            int numerator1, 
+            int denominator1, 
+            int numerator2, 
+            int denominator2, 
+            int expectedNumerator,
+            int expectedDenominator)
+        {
+            var result = new Fraction(numerator1, denominator1).Minus(new Fraction(numerator2, denominator2));
+            Assert.That(result, Is.EqualTo(new Fraction(expectedNumerator, expectedDenominator)));
+        }
+
 
 
 

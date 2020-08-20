@@ -37,7 +37,7 @@ namespace FractionsTest
 
         public Fraction Minus(Fraction that)
         {
-            return new Fraction(this.numerator - that.numerator);
+            return new Fraction(this.numerator - that.numerator, this.denominator);
         }
 
         public override string ToString()
