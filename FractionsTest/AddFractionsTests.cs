@@ -85,6 +85,8 @@ namespace FractionsTest
         }
 
         [TestCase(1,1,0)]
+        [TestCase(5,2,3)]
+        [TestCase(7,11,-4)]
         public void When_subtracting_fractions_whole_numbers(int fraction1, int fraction2, int expected)
         {
             var result = new Fraction(fraction1).Minus(new Fraction(fraction2));
