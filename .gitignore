@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/FractionsTDD/v16
+/.vs/FractionsTDD/DesignTimeBuild
+/.vs/FractionsTDD

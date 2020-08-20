@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace FractionsTest
@@ -50,5 +51,39 @@ namespace FractionsTest
         // reduce result even when denominators are the same
         // negative fractions and reducing
         // negative signes everywhere (ignored)
+
+        [TestCase(1,1,1)]
+        [TestCase(2,2,4)]
+        [TestCase(2,3,6)]
+        [TestCase(0,3,0)]
+        public void When_multiplying_fractions_whole_numbers(int fraction1, int fraction2, int expected)
+        {
+            var result = new Fraction(fraction1).Times(new Fraction(fraction2));
+            Assert.That(result, Is.EqualTo(new Fraction(expected)));
+        }
+
+        [TestCase(1,2,1,2,1,4)]
+        [TestCase(2,5,3,5,6,25)]
+        [TestCase(4,3,1,2,2,3)]
+        [TestCase(0,5,3,5,0,1)]
+        public void When_multiplying_fractions_with_thesame_denominator(
+            int numerator1, 
+            int denominator1, 
+            int numerator2, 
+            int denominator2, 
+            int expectedNumerator,
+            int expectedDenominator)
+        {
+            var result = new Fraction(numerator1, denominator1).Times(new Fraction(numerator2, denominator2));
+            Assert.That(result, Is.EqualTo(new Fraction(expectedNumerator, expectedDenominator)));
+        }
+
+        [Test]
+        public void When_multiplying_fractions_and_denominator_is_zero()
+        {
+            Assert.Catch<Exception>(() => new Fraction(1, 0).Times(new Fraction(1, 1)));
+        }
+
+    
     }
 }

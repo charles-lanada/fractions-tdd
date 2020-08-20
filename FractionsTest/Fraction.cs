@@ -14,6 +14,11 @@ namespace FractionsTest
 
         public Fraction(int numerator, int denominator)
         {
+            if(denominator == 0) 
+            {
+                throw new Exception();
+            }
+
             var denominatorSign = denominator < 0 ? -1 : 1;
             var greatesCommonDivisor = NumberTheory.GreatestCommonDivisor(numerator, denominator) * denominatorSign;
             this.numerator = numerator / greatesCommonDivisor;
@@ -23,6 +28,11 @@ namespace FractionsTest
         public Fraction Plus(Fraction that)
         {
             return new Fraction(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator);
+        }
+
+        public Fraction Times(Fraction that)
+        {
+            return new Fraction(this.numerator * that.numerator, this.denominator * that.denominator);
         }
 
         public override string ToString()
@@ -51,5 +61,7 @@ namespace FractionsTest
             // if you return a constant for get hash code, it works but it would be converted to linear search.
             return numerator * 19 + denominator;
         }
+
+        
     }
 }

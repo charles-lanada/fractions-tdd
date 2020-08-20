@@ -1,0 +1,15 @@
+{
+    "OperatorId": "some-guid",
+    "OperatorName": "devin-core",
+    "ReplyTimes": [
+        {
+            "ReplyTime": "10.00",
+            "Date": "08-10-2020"
+        },
+        {
+            "ReplyTime": "10.00",
+            "Date": "08-10-2020"
+        }
+    ]
+
+}
