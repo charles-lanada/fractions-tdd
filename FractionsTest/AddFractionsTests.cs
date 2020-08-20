@@ -84,6 +84,16 @@ namespace FractionsTest
             Assert.Catch<Exception>(() => new Fraction(1, 0).Times(new Fraction(1, 1)));
         }
 
+        [TestCase(1,1,0)]
+        public void When_subtracting_fractions_whole_numbers(int fraction1, int fraction2, int expected)
+        {
+            var result = new Fraction(fraction1).Minus(new Fraction(fraction2));
+            Assert.That(result, Is.EqualTo(new Fraction(expected)));
+        }
+
+
+
+
     
     }
 }
