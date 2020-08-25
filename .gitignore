@@ -5,3 +5,7 @@
 /.vs/FractionsTDD/v16
 /.vs/FractionsTDD/DesignTimeBuild
 /.vs/FractionsTDD
+test
+bin
+obj/
+bin/
