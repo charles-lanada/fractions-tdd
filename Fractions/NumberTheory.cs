@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FractionsTest
+namespace Fractions
 {
     public class NumberTheory
     {
@@ -15,5 +15,4 @@ namespace FractionsTest
             return Math.Abs(a);
         }
     }
-
 }

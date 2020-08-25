@@ -1,4 +1,5 @@
 using System;
+using Fractions;
 using NUnit.Framework;
 
 namespace FractionsTest
@@ -12,7 +13,7 @@ namespace FractionsTest
         [TestCase(-3, 1, -2)]
         public void When_adding_whole_numbers(int num1, int num2, int result)
         {
-            var sum = new Fraction(num1).Plus(new Fraction(num2));
+            var sum = new Fraction(num1).Plus(new Fraction(num2)); 
             Assert.That(sum, Is.EqualTo(new Fraction(result)));
         }
 
@@ -95,6 +96,7 @@ namespace FractionsTest
 
         [TestCase(2,5,2,5,0,5)]
         [TestCase(3,4,1,4,1,2)]
+        //[TestCase(2,7,5,6,-23,42)]
         public void When_subtracting_fractions(
             int numerator1, 
             int denominator1, 
@@ -106,10 +108,5 @@ namespace FractionsTest
             var result = new Fraction(numerator1, denominator1).Minus(new Fraction(numerator2, denominator2));
             Assert.That(result, Is.EqualTo(new Fraction(expectedNumerator, expectedDenominator)));
         }
-
-
-
-
-    
     }
 }

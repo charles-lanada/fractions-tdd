@@ -1,3 +1,4 @@
+using Fractions;
 using NUnit.Framework;
 
 namespace FractionsTest
@@ -42,5 +43,4 @@ namespace FractionsTest
             Assert.AreEqual(expectedResult, NumberTheory.GreatestCommonDivisor(numerator, denomator));
         }
     }
-
 }

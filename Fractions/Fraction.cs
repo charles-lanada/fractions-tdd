@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace FractionsTest
+namespace Fractions
 {
-    internal class Fraction
+    public class Fraction
     {
         private readonly int numerator;
         private readonly int denominator;
